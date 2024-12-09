@@ -3,21 +3,21 @@ addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request));
 });
 
-const dockerHub = "https://registry-1.hary.us.kg";
+const dockerHub = "https://registry-1.docker.io";
 
 const routes = {
   // production
-  ["jx." + hary.us.kg]: dockerHub,
-  ["quay.hary.us.kg" + CUSTOM_DOMAIN]: "https://quay.io",
-  ["gcr.hary.us.kg" + CUSTOM_DOMAIN]: "https://gcr.io",
-  ["k8s-gcr.hary.us.kg" + CUSTOM_DOMAIN]: "https://k8s.gcr.io",
-  ["k8s.hary.us.kg" + CUSTOM_DOMAIN]: "https://registry.k8s.io",
-  ["ghcr.hary.us.kg" + CUSTOM_DOMAIN]: "https://ghcr.io",
-  ["cloudsmith.hary.us.kg" + CUSTOM_DOMAIN]: "https://docker.cloudsmith.io",
-  ["ecr.hary.us.kg" + CUSTOM_DOMAIN]: "https://public.ecr.aws",
+  ["jx.hary.us.kg"]: dockerHub,
+  ["quay.hary.us.kg"]: "https://quay.io",
+  ["gcr.hary.us.kg"]: "https://gcr.io",
+  ["k8s-gcr.hary.us.kg"]: "https://k8s.gcr.io",
+  ["k8s.hary.us.kg"]: "https://registry.k8s.io",
+  ["ghcr.hary.us.kg"]: "https://ghcr.io",
+  ["cloudsmith.hary.us.kg"]: "https://docker.cloudsmith.io",
+  ["ecr.hary.us.kg"]: "https://public.ecr.aws",
 
   // staging
-  ["docker-staging.hary.us.kg" + CUSTOM_DOMAIN]: dockerHub,
+  ["docker-staging.hary.us.kg"]: dockerHub,
 };
 
 function routeByHosts(host) {
