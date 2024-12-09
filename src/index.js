@@ -17,7 +17,7 @@ const routes = {
   ["ecr.hary.us.kg"]: "https://public.ecr.aws",
 
   // staging
-  ["docker-staging.hary.us.kg"]: dockerHub,
+  ["docker-staging.hary.us.kg"]: "https://hub.docker.com",
 };
 
 function routeByHosts(host) {
